@@ -1,0 +1,135 @@
+========================================
+INSTRUCTIONS DE COMPILATION
+========================================
+
+Le projet contient les fichiers suivants :
+- BigBinary.h  : Fichier d'en-tête
+- BigBinary.c  : Implémentation
+- main.c       : Programme principal avec tests simples
+- tests.c      : Jeu de tests complet
+- Makefile     : Pour compilation automatique
+
+========================================
+MÉTHODE 1 : AVEC MAKEFILE (Linux/Mac)
+========================================
+
+1. Ouvrir un terminal dans le dossier du projet
+
+2. Compiler :
+   make
+
+3. Exécuter :
+   ./bigbinary
+
+4. Nettoyer :
+   make clean
+
+========================================
+MÉTHODE 2 : COMPILATION MANUELLE
+========================================
+
+LINUX / MAC :
+-------------
+# Compiler avec main.c
+gcc -Wall -Wextra -std=c99 -o bigbinary BigBinary.c main.c
+./bigbinary
+
+# Compiler avec tests.c (plus complet)
+gcc -Wall -Wextra -std=c99 -o tests BigBinary.c tests.c
+./tests
+
+
+WINDOWS (Command Prompt) :
+---------------------------
+# Compiler avec main.c
+gcc -Wall -Wextra -std=c99 -o bigbinary.exe BigBinary.c main.c
+bigbinary.exe
+
+# Compiler avec tests.c (plus complet)
+gcc -Wall -Wextra -std=c99 -o tests.exe BigBinary.c tests.c
+tests.exe
+
+
+WINDOWS (PowerShell) :
+----------------------
+# Compiler avec main.c
+gcc -Wall -Wextra -std=c99 -o bigbinary.exe BigBinary.c main.c
+.\bigbinary.exe
+
+# Compiler avec tests.c (plus complet)
+gcc -Wall -Wextra -std=c99 -o tests.exe BigBinary.c tests.c
+.\tests.exe
+
+========================================
+MÉTHODE 3 : COMPILATION PAR ÉTAPES
+========================================
+
+# Étape 1 : Compiler BigBinary.c en objet
+gcc -Wall -Wextra -std=c99 -c BigBinary.c
+
+# Étape 2 : Compiler main.c en objet
+gcc -Wall -Wextra -std=c99 -c main.c
+
+# Étape 3 : Lier les fichiers objets
+gcc -Wall -Wextra -std=c99 -o bigbinary BigBinary.o main.o
+
+# Étape 4 : Exécuter
+./bigbinary        # Linux/Mac
+bigbinary.exe      # Windows
+
+========================================
+AVEC UN IDE (Code::Blocks, Visual Studio, etc.)
+========================================
+
+1. Créer un nouveau projet C
+2. Ajouter les fichiers : BigBinary.h, BigBinary.c, main.c
+3. Compiler et exécuter avec l'IDE
+
+========================================
+VÉRIFICATION
+========================================
+
+La compilation est réussie si :
+- Aucune erreur n'apparaît
+- Un exécutable est créé (bigbinary ou bigbinary.exe)
+
+L'exécution est réussie si :
+- Tous les tests affichent "Attendu" et le résultat correct
+- Le programme se termine sans erreur
+- Aucun message "Segmentation fault" ou "Memory leak"
+
+========================================
+RÉSULTAT ATTENDU
+========================================
+
+Vous devriez voir s'afficher :
+===========================================
+   PROJET BIGBINARY - PHASE 1 - TESTS
+===========================================
+
+TEST 1: Création et affichage
+------------------------------
+a = 1010
+b = 0101
+
+... (suite des tests)
+
+===========================================
+       TOUS LES TESTS SONT TERMINÉS
+===========================================
+
+========================================
+EN CAS DE PROBLÈME
+========================================
+
+Erreur : "gcc command not found"
+→ Installer GCC (MinGW pour Windows)
+
+Erreur : "Cannot open include file"
+→ Vérifier que tous les fichiers sont dans le même dossier
+
+Erreur de compilation
+→ Vérifier la version de gcc : gcc --version
+→ Utiliser au moins gcc 4.9 ou supérieur
+
+========================================
