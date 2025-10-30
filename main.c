@@ -5,7 +5,6 @@ int main() {
     printf("   PROJET BIGBINARY - PHASE 1 - TESTS\n");
     printf("===========================================\n\n");
     
-    // TEST 1: Création et affichage
     printf("TEST 1: Création et affichage\n");
     printf("------------------------------\n");
     BigBinary a = creerBigBinaryDepuisChaine("1010");  // 10 en décimal
