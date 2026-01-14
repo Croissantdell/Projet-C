@@ -1,15 +1,3 @@
-/**
- * =============================================================================
- * main.c - Programme principal avec interface interactive
- * =============================================================================
- * 
- * ESIEA - Projet S5 Language C (2025-2026)
- * Projet BigBinary: Manipulation de grands entiers binaires
- * 
- * Ce programme propose:
- *   1. Une interface menu pour tester interactivement les fonctionnalités
- *   2. Des tests automatiques pour valider chaque phase
- */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,9 +6,7 @@
 
 #define MAX_INPUT 1024  // Taille max pour les entrées utilisateur
 
-/* =============================================================================
- * FONCTIONS D'AFFICHAGE
- * ============================================================================= */
+//FONCTIONS D'AFFICHAGE
 
 void afficherLigne(void) {
     printf("------------------------------------------------------------\n");
@@ -79,9 +65,8 @@ unsigned int lireUnsignedInt(const char *prompt) {
     return val;
 }
 
-/* =============================================================================
- * TESTS AUTOMATIQUES PHASE 1
- * ============================================================================= */
+
+// TESTS AUTOMATIQUES PHASE 1
 
 void testerPhase1(void) {
     afficherTitre("PHASE 1: FONCTIONNALITES DE BASE");
@@ -181,9 +166,8 @@ void testerPhase1(void) {
     printf("Phase 1 terminee avec succes!\n\n");
 }
 
-/* =============================================================================
- * TESTS AUTOMATIQUES PHASE 2
- * ============================================================================= */
+// TESTS AUTOMATIQUES PHASE 2
+
 
 void testerPhase2(void) {
     afficherTitre("PHASE 2: FONCTIONNALITES AVANCEES");
@@ -293,9 +277,9 @@ void testerPhase2(void) {
     printf("Phase 2 terminee avec succes!\n\n");
 }
 
-/* =============================================================================
- * TESTS AUTOMATIQUES PHASE 3 (RSA BONUS)
- * ============================================================================= */
+
+// TESTS AUTOMATIQUES PHASE 3 (RSA BONUS)
+
 
 void testerPhase3(void) {
     afficherTitre("PHASE 3 (BONUS): RSA");
@@ -369,9 +353,7 @@ void testerPhase3(void) {
     printf("Phase 3 (Bonus RSA) terminee avec succes!\n\n");
 }
 
-/* =============================================================================
- * MODE INTERACTIF
- * ============================================================================= */
+// MODE INTERACTIF
 
 void modeAddition(void) {
     afficherTitre("ADDITION");
@@ -527,9 +509,8 @@ void modeRSA(void) {
     libereBigBinary(&M_dec);
 }
 
-/* =============================================================================
- * PROGRAMME PRINCIPAL
- * ============================================================================= */
+// PROGRAMME PRINCIPAL
+
 
 int main(void) {
     int choix = -1;

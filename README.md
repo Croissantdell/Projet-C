@@ -4,7 +4,6 @@
 
 Ce projet implémente une bibliothèque en C pour la manipulation de **grands entiers binaires** (BigBinary), permettant d'effectuer des calculs sur des nombres arbitrairement grands, au-delà des limites des types natifs (32/64 bits).
 
-**Application principale** : Cryptographie RSA
 
 ---
 
@@ -14,7 +13,7 @@ Ce projet implémente une bibliothèque en C pour la manipulation de **grands en
 bigbinary_projet/
 ├── main.c              # Programme principal avec interface interactive
 ├── Makefile            # Script de compilation
-├── README.md           # Ce fichier
+├── README.md           
 └── src/
     ├── BigBinary.h     # Déclarations des structures et fonctions
     └── BigBinary.c     # Implémentation de la bibliothèque
@@ -22,43 +21,27 @@ bigbinary_projet/
 
 ---
 
-## Compilation et Exécution
-
-### Avec Make
-```bash
-make          # Compile le projet
-make run      # Compile et exécute
-make clean    # Nettoie les fichiers compilés
-```
-
-### Sans Make
-```bash
-gcc -Wall -std=c99 -o bigbinary main.c src/BigBinary.c
-./bigbinary
-```
-
----
 
 ## Fonctionnalités Implémentées
 
 ### Phase 1 : Fonctionnalités de Base
-- ✅ Structure `BigBinary` (tableau de bits, taille, signe)
-- ✅ Création depuis chaîne binaire
-- ✅ Addition (algorithme de l'école primaire)
-- ✅ Soustraction (avec gestion des emprunts)
-- ✅ Comparaisons (`Egal`, `Inferieur`, `Superieur`)
-- ✅ Division/Multiplication par 2 (décalages binaires)
+-  Structure `BigBinary` (tableau de bits, taille, signe)
+-  Création depuis chaîne binaire
+-  Addition (algorithme de l'école primaire)
+-  Soustraction (avec gestion des emprunts)
+-  Comparaisons (`Egal`, `Inferieur`, `Superieur`)
+-  Division/Multiplication par 2 (décalages binaires)
 
 ### Phase 2 : Fonctionnalités Avancées
-- ✅ **PGCD** - Algorithme binaire d'Euclide (Stein)
-- ✅ **Modulo** - Division-free mod (sans division euclidienne)
-- ✅ **Multiplication Égyptienne** - Par doublement et addition
-- ✅ **Exponentiation Modulaire Rapide** - Square-and-multiply
+-  **PGCD** - Algorithme binaire d'Euclide (Stein)
+-  **Modulo** - Division-free mod (sans division euclidienne)
+-  **Multiplication Égyptienne** - Par doublement et addition
+-  **Exponentiation Modulaire Rapide** - Square-and-multiply
 
 ### Phase 3 : RSA (Bonus)
-- ✅ **Chiffrement RSA** : C = M^E mod N
-- ✅ **Déchiffrement RSA** : M = C^D mod N
-- ✅ Support des grands exposants (BigBinary)
+-  **Chiffrement RSA** : C = M^E mod N
+-  **Déchiffrement RSA** : M = C^D mod N
+-  Support des grands exposants (BigBinary)
 
 ---
 
